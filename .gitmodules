@@ -1,3 +1,6 @@
 [submodule "third_party/oss-fuzz"]
 	path = third_party/oss-fuzz
 	url = https://github.com/google/oss-fuzz.git
+[submodule "fuzzers/csfuzz/CSFuzz"]
+	path = fuzzers/csfuzz/CSFuzz
+	url = https://github.com/csfuzz/CSFuzz

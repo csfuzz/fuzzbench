@@ -1,0 +1,5 @@
+commit: f1d67335542b21602e204ed1f80d861a1d720445
+commit_date: 2021-03-10 04:45:20+00:00
+fuzz_target: nghttp2_fuzzer
+project: nghttp2
+type: bug

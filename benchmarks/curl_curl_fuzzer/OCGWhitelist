@@ -1,0 +1,13 @@
+multistate
+curl_multi_add_handle
+Curl_multi_add_perform
+Curl_multi_handle
+curl_multi_init
+curl_multi_perform
+curl_multi_assign
+Curl_expire
+multi_runsingle
+multi_do
+multi_addmsg
+multi_timeout
+Curl_preconnect

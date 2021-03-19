@@ -1,0 +1,19 @@
+diff -c -r curl/lib/smtp.c curl_patched/lib/smtp.c
+*** curl/lib/smtp.c     2021-01-30 22:48:10.671625060 +0800
+--- curl_patched/lib/smtp.c     2021-01-30 22:53:24.514411327 +0800
+***************
+*** 309,315 ****
+      infof(data, "SMTP %p state change from %s to %s\n",
+            (void *)smtpc, names[smtpc->state], names[newstate]);
+  #endif
+!
+    smtpc->state = newstate;
+  }
+
+--- 309,315 ----
+      infof(data, "SMTP %p state change from %s to %s\n",
+            (void *)smtpc, names[smtpc->state], names[newstate]);
+  #endif
+!   printf("-------------------  %d -> %d\n", smtpc->state, newstate);
+    smtpc->state = newstate;
+  }

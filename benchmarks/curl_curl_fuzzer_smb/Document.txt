@@ -1,0 +1,22 @@
+lib/smb.c
+/* SMB request state */
+enum smb_req_state {
+  SMB_REQUESTING,
+  SMB_TREE_CONNECT,
+  SMB_OPEN,
+  SMB_DOWNLOAD,
+  SMB_UPLOAD,
+  SMB_CLOSE,
+  SMB_TREE_DISCONNECT,
+  SMB_DONE
+};
+
+lib/smb.h
+/* SMB connection state */
+enum smb_conn_state {
+  SMB_NOT_CONNECTED = 0,
+  SMB_CONNECTING,
+  SMB_NEGOTIATE,
+  SMB_SETUP,
+  SMB_CONNECTED
+};
