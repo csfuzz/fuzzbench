@@ -11,3 +11,10 @@ multi_do
 multi_addmsg
 multi_timeout
 Curl_preconnect
+init_completed
+curl_multi_remove_handle
+multi_getsock
+multi_ischanged
+process_pending_handles
+Curl_multi_dump
+curl_easy_pause
