@@ -57,6 +57,7 @@ def run_fuzzer(input_corpus, output_corpus, target_binary, extra_flags=None):
     os.makedirs(output_corpus)
 
     flags = [
+        '-rss_limit_mb=4096',
         '-ignore_ooms=1',
         '-ignore_timeouts=1',
         '-ignore_crashes=1',
