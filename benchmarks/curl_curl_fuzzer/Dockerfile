@@ -18,11 +18,14 @@ FROM gcr.io/oss-fuzz-base/base-builder@sha256:6cd402d36992b46a9358a6cdbe2d5fa399
 MAINTAINER dvyukov@google.com
 
 COPY state_variable.patch $SRC/
+RUN apt-get update && apt-get install -y make autoconf automake libtool libssl-dev zlib1g-dev
 RUN git clone https://github.com/curl/curl.git /src/curl
-RUN git clone https://github.com/curl/curl-fuzzer.git /src/curl_fuzzer
+RUN git clone https://github.com/curl/curl-fuzzer.git /src/curl_fuzzer && \
+  cd /src/curl_fuzzer && \
+  git checkout -f e4e34b2d00020740d91b31169b1ca765874044f4
 
 # Use curl-fuzzer's scripts to get latest dependencies.
-RUN $SRC/curl_fuzzer/scripts/ossfuzzdeps.sh
+#RUN $SRC/curl_fuzzer/scripts/ossfuzzdeps.sh
 
 WORKDIR $SRC/curl_fuzzer
 COPY build.sh $SRC/
