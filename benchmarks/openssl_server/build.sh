@@ -42,5 +42,5 @@ cp fuzz/oids.txt $OUT/asn1.dict
 cp fuzz/oids.txt $OUT/x509.dict
 
 # Use the local seed
-rm -rf $OUT/*_seed_corpus.zip
-cp -r /opt/seeds $OUT/
+#rm -rf $OUT/*_seed_corpus.zip
+#cp -r /opt/seeds $OUT/
