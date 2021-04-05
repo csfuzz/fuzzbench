@@ -43,12 +43,12 @@ CC=clang CXX=clang++ ${SCRIPTDIR}/handle_x.sh zlib ${ZLIBDIR} ${INSTALLDIR} || e
 
 # For the memory sanitizer build, turn off OpenSSL as it causes bugs we can't
 # affect (see 16697, 17624)
-if [[ ${SANITIZER} != "memory" ]]
-then
-    # Install openssl
-    export OPENSSLFLAGS="-fno-sanitize=alignment"
-    ${SCRIPTDIR}/handle_x.sh openssl ${OPENSSLDIR} ${INSTALLDIR} || exit 1
-fi
+#if [[ ${SANITIZER} != "memory" ]]
+#then
+# Install openssl
+#export OPENSSLFLAGS="-fno-sanitize=alignment"
+${SCRIPTDIR}/handle_x.sh openssl ${OPENSSLDIR} ${INSTALLDIR} || exit 1
+#fi
 
 # Install nghttp2
 CC=clang CXX=clang++ ${SCRIPTDIR}/handle_x.sh nghttp2 ${NGHTTPDIR} ${INSTALLDIR} || exit 1
@@ -71,8 +71,8 @@ do
 done
 
 # Use the local seed
-rm -rf $OUT/*_seed_corpus.zip
-cp -r /opt/seeds $OUT/
+#rm -rf $OUT/*_seed_corpus.zip
+#cp -r /opt/seeds $OUT/
 
 # Copy dictionary and options file to $OUT.
 cp -v ossconfig/*.dict ossconfig/*.options $OUT/
