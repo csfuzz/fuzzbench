@@ -1,5 +1,5 @@
-commit: aab3a77e8c1be2e5333d1ae436ab99d8b8f73580
-commit_date: 2021-03-15 23:35:38+00:00
+commit: 0922f762407cc20c90f8f5cfa01c5eafbdfecde0
+commit_date: 2020-02-27 00:51:49+00:00
 fuzz_target: curl_fuzzer_smtp
 project: curl
 type: bug

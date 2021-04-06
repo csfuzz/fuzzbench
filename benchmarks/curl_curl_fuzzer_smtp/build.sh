@@ -47,7 +47,7 @@ if [[ ${SANITIZER} != "memory" ]]
 then
     # Install openssl
     export OPENSSLFLAGS="-fno-sanitize=alignment"
-    ${SCRIPTDIR}/handle_x.sh openssl ${OPENSSLDIR} ${INSTALLDIR} || exit 1
+    CC=clang CXX=clang++ ${SCRIPTDIR}/handle_x.sh openssl ${OPENSSLDIR} ${INSTALLDIR} || exit 1
 fi
 
 # Install nghttp2
@@ -71,8 +71,8 @@ do
 done
 
 # Use the local seed
-rm -rf $OUT/*_seed_corpus.zip
-cp -r /opt/seeds $OUT/
+#rm -rf $OUT/*_seed_corpus.zip
+#cp -r /opt/seeds $OUT/
 
 # Copy dictionary and options file to $OUT.
 cp -v ossconfig/*.dict ossconfig/*.options $OUT/

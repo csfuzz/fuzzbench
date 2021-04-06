@@ -19,8 +19,9 @@ MAINTAINER dvyukov@google.com
 
 COPY state_variable.patch $SRC/
 RUN git clone https://github.com/curl/curl.git /src/curl
-RUN git clone https://github.com/curl/curl-fuzzer.git /src/curl_fuzzer
-
+RUN git clone https://github.com/curl/curl-fuzzer.git /src/curl_fuzzer && \
+  cd /src/curl_fuzzer && \
+  git checkout -f 82eb95b410cc84579b8f9d663f2a7e38f3bdb41f
 # Use curl-fuzzer's scripts to get latest dependencies.
 RUN $SRC/curl_fuzzer/scripts/ossfuzzdeps.sh
 
