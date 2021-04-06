@@ -29,5 +29,5 @@ cp $SRC/*.options $SRC/h2o/fuzz/*.dict $OUT/
 popd
 
 # Use the local seed
-rm -rf $OUT/*_seed_corpus.zip
-cp -r /opt/seeds $OUT/
+#rm -rf $OUT/*_seed_corpus.zip
+#cp -r /opt/seeds $OUT/
