@@ -50,5 +50,5 @@ cp *.options $OUT/
 cp fuzz_*_seed_corpus.zip $OUT/
 
 # Use the local seed
-rm -rf $OUT/*_seed_corpus.zip
-cp -r /opt/seeds $OUT/
+#rm -rf $OUT/*_seed_corpus.zip
+#cp -r /opt/seeds $OUT/
