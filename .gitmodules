@@ -4,3 +4,6 @@
 [submodule "fuzzers/csfuzz/CSFuzz"]
 	path = fuzzers/csfuzz/CSFuzz
 	url = https://github.com/csfuzz/CSFuzz
+[submodule "fuzzers/ifcg/CSFuzz"]
+	path = fuzzers/ifcg/CSFuzz
+	url = https://github.com/csfuzz/CSFuzz
