@@ -22,9 +22,7 @@ git submodule update --init
 git submodule update --remote --merge
 # make install-dependencies
 # source .venv/bin/activate
-# TODO @Jonathan
-echo "TODO: Create $HOME/csfuzz-workdir and csfuzz-experiment-config.yaml."
-exit 1
+
 # These paths are specific to the user's machine.
 experiment_working_dir=$HOME/csfuzz-workdir 
 config_filename="csfuzz-experiment-config.yaml"
