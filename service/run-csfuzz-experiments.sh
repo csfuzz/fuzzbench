@@ -30,8 +30,8 @@ cd $experiment_working_dir
 # High priority: openssl_server, curl_curl_fuzzer_imap, curl_curl_fuzzer_smb, curl_curl_fuzzer_smtp, gstreamer_gst-discoverer
 # Low priority: nghttp2_nghttp2_fuzzer, h2o_h2o-fuzzer-http2, mbedtls_fuzz_dtlsserver, curl_curl_fuzzer
 # nice to have: ntp_fuzz_ntpd_receive
-benchmarks="openssl_server curl_curl_fuzzer_imap curl_curl_fuzzer_smb curl_curl_fuzzer_smtp gstreamer_gst-discoverer nghttp2_nghttp2_fuzzer h2o_h2o-fuzzer-http2 mbedtls_fuzz_dtlsserver curl_curl_fuzzer ntp_fuzz_ntpd_receive"
-fuzzers="libfuzzer csfuzz ifcg"
+benchmarks="curl_curl_fuzzer_imap nghttp2_nghttp2_fuzzer mbedtls_fuzz_dtlsserver"
+fuzzers="libfuzzer csfuzz"
 experiment_name=$(date --iso-8601)-"csfuzz"
 run_experiment=$csfuzz_root/experiment/run_experiment.py
 export PYTHONPATH=$csfuzz_root
