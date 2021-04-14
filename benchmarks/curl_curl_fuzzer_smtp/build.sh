@@ -47,7 +47,7 @@ if [[ ${SANITIZER} != "memory" ]]
 then
     # Install openssl
     export OPENSSLFLAGS="-fno-sanitize=alignment"
-    ${SCRIPTDIR}/handle_x.sh openssl ${OPENSSLDIR} ${INSTALLDIR} || exit 1
+    CC=clang CXX=clang++ ${SCRIPTDIR}/handle_x.sh openssl ${OPENSSLDIR} ${INSTALLDIR} || exit 1
 fi
 
 # Install nghttp2
